@@ -15,3 +15,4 @@ KitchenFlow-SignalR is a C# project that utilizes SignalR for real-time communic
 - ASP.NET Core
 - SignalR
 - Entity Framework Core
+- Angular
