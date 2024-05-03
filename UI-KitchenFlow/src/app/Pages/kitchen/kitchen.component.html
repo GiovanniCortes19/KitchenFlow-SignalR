@@ -1,0 +1,19 @@
+<h1 id="title">Kitchen</h1>
+
+<h2>Active Orders</h2>
+<div class="orders-view">
+  @for (order of existingOrders(); track order.id) {
+  <div class="order-item">
+    <div class="info">
+      <p>Food: {{order.foodItem.name}}</p>
+      <p>Table Number: {{order.tableNumber}}</p>
+      <p>Ordered at: {{order.orderDate | date:'dd/MM/yyyy H:mm'}}</p>
+    </div>
+    <select name="order-status" id="order-status" (change)="updateStatus(order.id, $event)">
+      @for (status of foodStatuses; track status) {
+      <option [value]="status">{{status}}</option>
+      }
+    </select>
+  </div>
+  }
+</div>
