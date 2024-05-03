@@ -40,3 +40,4 @@ TestResults/
 
 # Ignore sqlite files
 *.sqlite
+*.sqlite*
