@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.orders-view {
+  margin: auto;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.order-item {
+  padding: 10px;
+  border: 1px solid green;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}

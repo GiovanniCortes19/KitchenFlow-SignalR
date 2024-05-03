@@ -1,9 +1,9 @@
 // Food Item
 export interface FoodItem {
-  id: string;
+  id: number;
   name: string;
   description: string;
-  imgUrl: string;
+  imageUrl: string;
 }
 
 // Food List
@@ -16,7 +16,7 @@ export interface Order {
   id: number;
   tableNumber: number;
   foodItemId: number;
-  footItem: FoodItem;
+  foodItem: FoodItem;
   orderDate: Date; // Date for DateTimeOffset
   orderStatus: OrderStatus;
 }

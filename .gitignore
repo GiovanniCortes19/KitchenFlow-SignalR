@@ -37,3 +37,7 @@ TestResults/
 
 # Ignore Visual Studio Code files
 .vscode/
+
+# Ignore sqlite files
+*.sqlite
+*.sqlite*

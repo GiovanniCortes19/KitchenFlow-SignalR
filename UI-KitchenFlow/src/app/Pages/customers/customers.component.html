@@ -1,0 +1,33 @@
+<h1 class="title">Welcome to Le'Special Restaurant</h1>
+
+<label for="table-number">Customer's Table Number: </label>
+<input type="number" id="table-number" name="table-number" [(ngModel)]="tableNumber" required>
+
+<p class="ordering-header">What would they like to eat?</p>
+
+<div class="food-view">
+  @for (food of availableFood(); track food.id) {
+  <div class="food-option">
+    <img [src]="food.imageUrl" [alt]="food.name">
+    <div class="text">
+      <p class="foodName"> {{food.name}} </p>
+      <p class="foodDescription"> {{food.description}} </p>
+    </div>
+    <button [disabled]="!tableNumber" (click)="sendOrder(food.id, tableNumber!)">Order</button>
+  </div>
+  }
+</div>
+
+@if (showActiveOrders) {
+<h3>Active Orders:</h3>
+<div class="active-orders-view">
+  <ul>
+    @for (order of activeOrders(); track order) {
+    <li class="order"> {{order.foodItem.name}} for table #{{order.tableNumber}}. Status: {{order.orderStatus}} </li>
+    }
+  </ul>
+  <button class="show-orders-toggle" (click)="showActiveOrdersToggle()">Hide Orders</button>
+</div>
+} @else {
+<button class="show-orders-toggle" (click)="showActiveOrdersToggle()">Show Orders</button>
+}
